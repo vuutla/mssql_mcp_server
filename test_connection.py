@@ -1,10 +1,10 @@
 import pymssql
 
 config = {
-    "server": "{DB Server}}",
-    "user": "{SQL account}}",
-    "password": "{SQL password}",
-    "database": "{DB Name}}"
+    "server": "dataeserver.database.windows.net",
+    "user": "sqleadmin",
+    "password": "dataeserveradmin007$",
+    "database": "Employee"
 }
 
 try:
@@ -14,7 +14,7 @@ try:
     print("Connection successful!")
     
     print("\nTesting query execution...")
-    cursor.execute("SELECT TOP 1 * FROM INFORMATION_SCHEMA.TABLES")
+    cursor.execute("SELECT * FROM EMP")
     row = cursor.fetchone()
     print(f"Query result: {row}")
     
